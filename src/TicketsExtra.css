@@ -1,0 +1,63 @@
+/* src/TicketsExtra.css */
+
+.tickets-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.tickets-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Grid general */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Cabecera */
+.header {
+  font-weight: bold;
+  background-color: #4CAF50;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* Filas */
+.row.even {
+  background-color: #ffffff;
+}
+
+.row.odd {
+  background-color: #e0e0e0;
+  margin-bottom: 2px;
+}
+
+/* Responsive: en móviles cambiar a columnas apiladas */
+@media (max-width: 600px) {
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .tickets-grid div {
+    margin-bottom: 5px;
+  }
+
+  .header {
+    display: none; /* Opcional: ocultar cabecera para móviles */
+  }
+
+  .row {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}

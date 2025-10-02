@@ -28,36 +28,35 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Menú superior tipo Tabs */}
-     <nav className="menu">
-  <button
-    className={menu === 'empleados' ? 'tab active' : 'tab'}
-    onClick={() => setMenu('empleados')}
-  >
-    👥 Empleados
-  </button>
+      <nav className="menu">
+        <button
+          className={menu === 'empleados' ? 'tab active' : 'tab'}
+          onClick={() => setMenu('empleados')}
+        >
+          👥 Empleados
+        </button>
 
-  <button
-    className={menu === 'turnos' ? 'tab active' : 'tab'}
-    onClick={() => setMenu('turnos')}
-  >
-    🎫 Imprimir Tickets
-  </button>
+        <button
+          className={menu === 'turnos' ? 'tab active' : 'tab'}
+          onClick={() => setMenu('turnos')}
+        >
+          🎫 Imprimir Tickets
+        </button>
 
-  <button
-    className={menu === 'config' ? 'tab active' : 'tab'}
-    onClick={() => setMenu('config')}
-  >
-    👷 Cantidad Trabajadores
-  </button>
+        <button
+          className={menu === 'config' ? 'tab active' : 'tab'}
+          onClick={() => setMenu('config')}
+        >
+          👷 Cantidad Trabajadores
+        </button>
 
-  <button
-    className={menu === 'tickets' ? 'tab active' : 'tab'}
-    onClick={() => setMenu('tickets')}
-  >
-    🖐🏻 Tickets Extra
-  </button>
-</nav>
-
+        <button
+          className={menu === 'tickets' ? 'tab active' : 'tab'}
+          onClick={() => setMenu('tickets')}
+        >
+          🖐🏻 Tickets Extra
+        </button>
+      </nav>
 
       {/* Contenido que cambia según el tab */}
       <main className="content">{renderSeccion()}</main>

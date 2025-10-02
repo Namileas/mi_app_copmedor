@@ -1,4 +1,6 @@
+// src/TicketsExtra.jsx
 import React, { useEffect, useState } from "react";
+import './TicketsExtra.css'; // Nuevo archivo de estilos
 
 export default function TicketsExtra() {
   const [tickets, setTickets] = useState([]);
@@ -32,21 +34,10 @@ export default function TicketsExtra() {
   }, []);
 
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}></h1>
+    <div className="tickets-container">
+      <h1 className="tickets-title">Tickets Extra</h1>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          fontWeight: "bold",
-          backgroundColor: "#4CAF50",
-          color: "#fff",
-          padding: "10px",
-          borderRadius: "5px",
-          marginBottom: "5px",
-        }}
-      >
+      <div className="tickets-grid header">
         <div>Código</div>
         <div>Nombre</div>
         <div>Apellido</div>
@@ -55,17 +46,7 @@ export default function TicketsExtra() {
       </div>
 
       {tickets.map((item, index) => (
-        <div
-          key={item.codigo || index}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            padding: "10px",
-            backgroundColor: index % 2 === 0 ? "#ffffff" : "#e0e0e0",
-            borderRadius: "5px",
-            marginBottom: "2px",
-          }}
-        >
+        <div key={item.codigo || index} className={`tickets-grid row ${index % 2 === 0 ? "even" : "odd"}`}>
           <div>{item.codigo}</div>
           <div>{item.nombre}</div>
           <div>{item.apellido}</div>

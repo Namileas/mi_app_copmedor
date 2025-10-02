@@ -1,4 +1,6 @@
+// src/Turnos.jsx
 import React from "react";
+import './Turnos.css'; // Nuevo archivo de estilos
 
 export default function Turnos() {
   const API_BASE = "https://cephalic-dorthea-hamperedly.ngrok-free.dev";
@@ -23,23 +25,7 @@ export default function Turnos() {
   };
 
   const Boton = ({ titulo, color, turno }) => (
-    <button
-      style={{
-        flex: 1,
-        margin: "20px",
-        padding: "50px",
-        borderRadius: "15px",
-        backgroundColor: color,
-        color: "#fff",
-        fontSize: "32px",
-        fontWeight: "bold",
-        cursor: "pointer",
-        boxShadow: "0 4px 6px rgba(0,0,0,0.3)",
-        border: "none",
-        minWidth: "200px",
-      }}
-      onClick={() => imprimir(turno)}
-    >
+    <button className="boton-turno" style={{ backgroundColor: color }} onClick={() => imprimir(turno)}>
       {titulo}
     </button>
   );
@@ -48,30 +34,9 @@ export default function Turnos() {
   const esDomingo = hoy.getDay() === 0;
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
-      <h1 style={{ fontSize: "40px", marginBottom: "40px", color: "#333" }}>
-        Selecciona un turno:
-      </h1>
-
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
+    <div className="turnos-container">
+      <h1 className="turnos-title">Selecciona un turno:</h1>
+      <div className="turnos-grid">
         {esDomingo ? (
           <Boton titulo="🍽 Almuerzo Domingo" turno="domingo" color="#4CAF50" />
         ) : (

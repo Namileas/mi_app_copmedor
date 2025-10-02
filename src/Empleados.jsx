@@ -1,4 +1,6 @@
+// src/Empleados.jsx
 import React, { useState } from "react";
+import './Empleados.css'; // Nuevo archivo de estilos
 
 export default function Empleados() {
   const [empleados, setEmpleados] = useState([]);
@@ -38,7 +40,7 @@ export default function Empleados() {
 
   return (
     <div className="empleados-container">
-      <h2>Seleccione el tipo de Alimentacion :</h2>
+      <h2 className="empleados-title">Seleccione el tipo de Alimentacion :</h2>
 
       <div className="button-container">
         <button

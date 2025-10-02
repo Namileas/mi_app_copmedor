@@ -1,5 +1,6 @@
 // src/Configuracion.jsx
 import React, { useEffect, useState } from "react";
+import './Configuracion.css'; // Nuevo archivo de estilos para adaptabilidad
 
 export default function Configuracion() {
   const [datos, setDatos] = useState({
@@ -29,28 +30,21 @@ export default function Configuracion() {
   }, []);
 
   const Card = ({ label, valor }) => (
-    <div
-      style={{
-        backgroundColor: "#fff",
-        padding: "20px",
-        borderRadius: "12px",
-        marginBottom: "15px",
-        boxShadow: "0 3px 6px rgba(0,0,0,0.1)",
-      }}
-    >
-      <p style={{ fontSize: "16px", marginBottom: "8px", color: "#333" }}>{label}</p>
-      <p style={{ fontSize: "24px", fontWeight: "bold", color: "#4CAF50" }}>{valor}</p>
+    <div className="card">
+      <p className="card-label">{label}</p>
+      <p className="card-value">{valor}</p>
     </div>
   );
 
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-      <h1 style={{ textAlign: "center", fontSize: "28px", fontWeight: "bold", marginBottom: "20px" }}>        
-      </h1>
+    <div className="config-container">
+      <h1 className="config-title">Resumen de Configuración</h1>
 
-      <Card label="🌿 Trabajadores que ingresaron ayer (desayuno)" valor={datos.trabajadoresAyer} />
-      <Card label="🏢 Trabajadores en planta hoy" valor={datos.trabajadoresPlanta} />
-      <Card label="❌ Trabajadores que no fueron al comedor hoy" valor={datos.noFueronComedor} />
+      <div className="cards-wrapper">
+        <Card label="🌿 Trabajadores que ingresaron ayer (desayuno)" valor={datos.trabajadoresAyer} />
+        <Card label="🏢 Trabajadores en planta hoy" valor={datos.trabajadoresPlanta} />
+        <Card label="❌ Trabajadores que no fueron al comedor hoy" valor={datos.noFueronComedor} />
+      </div>
     </div>
   );
 }

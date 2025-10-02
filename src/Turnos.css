@@ -1,0 +1,72 @@
+/* src/Turnos.css */
+.turnos-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.turnos-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid de botones */
+.turnos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Botones de turno */
+.boton-turno {
+  flex: 1;
+  min-width: 200px;
+  padding: 50px 20px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  border: none;
+  transition: transform 0.2s;
+}
+
+.boton-turno:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .boton-turno {
+    padding: 30px 15px;
+    font-size: 24px;
+  }
+
+  .turnos-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton-turno {
+    padding: 20px 10px;
+    font-size: 20px;
+  }
+
+  .turnos-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}

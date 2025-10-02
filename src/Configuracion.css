@@ -1,0 +1,61 @@
+/* src/Configuracion.css */
+
+.config-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.config-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Tarjetas adaptables */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: center;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .cards-wrapper {
+    gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-value {
+    font-size: 20px;
+  }
+}
