@@ -10,7 +10,7 @@ export default function Empleados() {
     setLoading(true);
     setTurnoSeleccionado(turno);
     try {
-      const res = await fetch("http://200.87.199.52:5000/api/reportes/empleados-por-turno", {
+      const res = await fetch("https://cephalic-dorthea-hamperedly.ngrok-free.dev/api/reportes/empleados-por-turno", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ turno }),

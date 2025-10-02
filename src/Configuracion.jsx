@@ -11,7 +11,7 @@ export default function Configuracion() {
   const fetchDatos = async () => {
     try {
       const resp = await fetch(
-        "http://200.87.199.52:5000/api/Reportes/configuracion",
+        "https://cephalic-dorthea-hamperedly.ngrok-free.dev/api/Reportes/configuracion",
         { method: "POST", headers: { "Content-Type": "application/json" } }
       );
       const json = await resp.json();

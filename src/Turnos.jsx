@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Turnos() {
-  const API_BASE = "http://200.87.199.52:5000";
+  const API_BASE = "https://cephalic-dorthea-hamperedly.ngrok-free.dev";
 
   const imprimir = async (turno) => {
     try {

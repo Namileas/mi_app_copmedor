@@ -6,7 +6,7 @@ export default function TicketsExtra() {
   const fetchTickets = async () => {
     try {
       const res = await fetch(
-        "http://200.87.199.52:5000/api/Reportes/tickets-extra",
+        "https://cephalic-dorthea-hamperedly.ngrok-free.dev/api/Reportes/tickets-extra",
         { method: "POST", headers: { "Content-Type": "application/json" } }
       );
 
